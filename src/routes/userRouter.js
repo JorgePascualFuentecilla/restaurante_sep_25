@@ -1,20 +1,20 @@
 import {Router} from "express";
-import userController from "../controllers/user/userController.js"
+import userViewController from "../controllers/user/userViewController.js";
 const router = Router();
 
-router.get("/",userController.getAll);
+router.get("/",userViewController.getAll);
 
-router.get("/:id",userController.getById);
+router.get("/:id",userViewController.getById);
 
-router.get("/new",userController.createForm);
+router.get("/new",userViewController.createForm);
 
-router.post("/",userController.create);
+router.post("/",userViewController.create);
 
-router.get("/:id/update",userController.updateForm);
+router.get("/:id/update",userViewController.updateForm);
 
-router.post("/:id",userController.update);
+router.post("/:id",userViewController.update);
 
-router.post("/:id/delete",userController.remove);
+router.post("/:id/delete",userViewController.remove);
 
 
 export default router;
